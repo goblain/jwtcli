@@ -42,8 +42,8 @@ func createCmd() *cobra.Command {
 				Issuer:    createConfig.iss,
 				Subject:   createConfig.sub,
 				Audience:  createConfig.aud,
-				ExpiresAt: jwt.NewNumericDate(time.Now()),
-				NotBefore: jwt.NewNumericDate(time.Now().Add(duration)),
+				ExpiresAt: jwt.NewNumericDate(time.Now().Add(duration)),
+				NotBefore: jwt.NewNumericDate(time.Now()),
 			}
 
 			var rawKey []byte
